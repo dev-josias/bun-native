@@ -1,0 +1,34 @@
+{
+  "name": "bun-native",
+  "version": "0.1.1",
+  "description": "Use Bun as a package manager with React Native",
+  "bin": {
+    "bun-native": "dist/bun-native.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "bun build bin/bun-native.ts --outdir dist --target bun",
+    "postinstall": "bun-native postinstall"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.19"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "bun",
+    "react-native",
+    "cli",
+    "metro",
+    "node_modules"
+  ],
+  "license": "MIT",
+  "author": "Your Name"
+}

@@ -1,0 +1,11 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 40px sans-serif; fill: #ffdc00 }
+    .subtitle { font: 20px sans-serif; fill: #ffffff }
+    .bg { fill: #161616 }
+    .highlight { fill: #f58c00 }
+  </style>
+  <rect class="bg" width="100%" height="100%"/>
+  <text x="50%" y="40%" text-anchor="middle" class="title">bun-native</text>
+  <text x="50%" y="65%" text-anchor="middle" class="subtitle">Use Bun with React Native CLI + Metro 💥</text>
+</svg>
