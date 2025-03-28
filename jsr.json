@@ -2,5 +2,6 @@
   "name": "@dev-josias/bun-native",
   "exports": {
     ".": "./src/index.ts"
-  }
+  },
+  "version": "0.1.4"
 }
