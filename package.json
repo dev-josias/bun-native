@@ -1,6 +1,6 @@
 {
   "name": "bun-native",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Use Bun as a package manager with React Native",
   "bin": {
     "bun-native": "dist/bun-native.js"
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.11.19"
+    "@types/node": "22.13.14"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
