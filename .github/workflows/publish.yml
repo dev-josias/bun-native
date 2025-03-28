@@ -26,6 +26,9 @@ jobs:
       - name: 🛠️ Build CLI
         run: bun run build
 
+      - name: Run postinstall manually
+        run: bun run dist/bun-native.js postinstall
+
       - name: 🚀 Publish to npm
         run: |
           npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}

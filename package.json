@@ -7,8 +7,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "bun build bin/bun-native.ts --outdir dist --target bun",
-    "postinstall": "bun-native postinstall"
+    "build": "bun build bin/bun-native.ts --outdir dist --target bun"
   },
   "dependencies": {
     "chalk": "^5.4.1",
@@ -30,5 +29,9 @@
     "node_modules"
   ],
   "license": "MIT",
-  "author": "Your Name"
+  "author": "KOLOGO B Josias Yannick",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/dev-josias/bun-native"
 }
