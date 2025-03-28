@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/assets/banner.svg" width="600" alt="bun-native">
+  <img src="https://raw.githubusercontent.com/dev-josias/bun-native/main/assets/banner.svg" width="600" alt="bun-native">
 </p>
 
 # 🌀 bun-native
@@ -93,4 +93,4 @@ Ideas, templates, and bug reports are also appreciated.
 
 ## 📜 License
 
-MIT © 2025 [Kologo B Josias Yannick]
+MIT © 2025 [Kologo B Josias Yannick](https://kologojosias.com)

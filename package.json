@@ -1,13 +1,14 @@
 {
   "name": "bun-native",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Use Bun as a package manager with React Native",
   "bin": {
     "bun-native": "dist/bun-native.js"
   },
   "type": "module",
   "scripts": {
-    "build": "bun build bin/bun-native.ts --outdir dist --target bun"
+    "build": "bun build bin/bun-native.ts --outdir dist --target bun",
+    "test": "bun test"
   },
   "dependencies": {
     "chalk": "^5.4.1",

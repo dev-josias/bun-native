@@ -1,0 +1,6 @@
+{
+  "name": "@dev-josias/bun-native",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
