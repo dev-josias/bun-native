@@ -1,21 +1,21 @@
-name: 🚀 Publish to npm
+name: 🚀 Release & Publish
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*"
 
 jobs:
-  publish:
-    name: 📦 Publish Package
+  release:
+    name: 📦 Publish bun-native
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       id-token: write
 
     steps:
-      - name: ⬇️ Checkout repo
+      - name: ⬇️ Checkout code
         uses: actions/checkout@v3
 
       - name: 🔧 Set up Bun
@@ -27,12 +27,26 @@ jobs:
       - name: 🛠️ Build CLI
         run: bun run build
 
-      - name: Run postinstall manually
+      - name: 🛠 Run postinstall manually
         run: bun run dist/bun-native.js postinstall
 
-      - name: 🚀 Publish to npm
+      - name: 📦 Publish to npm
         run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if [[ $VERSION == *"-"* ]]; then
+            TAG="next"
+          else
+            TAG="latest"
+          fi
+          echo "Publishing version $VERSION with tag $TAG"
           npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
-          npm publish --access public
+          npm publish --access public --tag $TAG
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 🏷️ Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          generate_release_notes: true
