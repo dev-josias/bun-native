@@ -11,9 +11,12 @@ program
   .version("0.1.0");
 
 program
-  .command("init")
+  .command("init [name]")
+  .option("-v, --version <version>", "React Native version", "0.78.1")
   .description("Initialize a Bun-powered React Native project")
-  .action(runInit);
+  .action((name = "MyApp", options) => {
+    runInit(name, options.version);
+  });
 
 program
   .command("patch-metro")

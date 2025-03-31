@@ -35,6 +35,30 @@ curl -fsSL https://bun.sh/install | bash
 
 ## 🧪 Usage
 
+### 🆕 Initialize a New Project (React Native CLI)
+
+```bash
+bun-native init
+```
+
+Creates a new React Native project and installs everything using Bun.
+
+📦 Customize the Project Name
+
+You can pass a name to create your project:
+
+```bash
+bun-native init MyApp
+```
+
+🧪 Choose a Specific React Native Version
+
+Use the --version flag to target a specific RN version:
+
+```bash
+bun-native init MyApp --version 0.78.1
+```
+
 ### ✅ Migrate an Existing React Native Project
 
 ```bash
@@ -54,14 +78,6 @@ bun-native start
 bun-native run-ios
 bun-native run-android
 ```
-
-### 🆕 Initialize a New Project (React Native CLI)
-
-```bash
-bun-native init
-```
-
-Creates a new React Native project and installs everything using Bun.
 
 ## 🧠 How It Works
 
