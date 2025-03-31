@@ -25,8 +25,11 @@ program
 
 program
   .command("postinstall")
+  .option("--debug", "Enable debug logging")
   .description("Run postinstall to patch Metro and create mirror layout")
-  .action(runPostInstall);
+  .action((options) => {
+    runPostInstall(options.debug);
+  });
 
 program.command("run-ios").action(runIOS);
 program.command("run-android").action(runAndroid);
